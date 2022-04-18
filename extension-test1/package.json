@@ -11,15 +11,27 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:test-vscode-hello",
+        "onCommand:testHello",
 				"onLanguage:javascript",
         "onLanguage:vue"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
+		"configuration":{
+			"type": "object",
+			"title": "my extension configuration",
+			"properties":{
+				"myExtension.switchTest":{
+					"type":"boolean",
+					"default": false,
+					"description":"test config"
+				}
+			}
+		},
+
 		"commands": [
 			{
-				"command": "test-vscode-hello",
+				"command": "testHello",
 				"title": "测试插件hello"
 			}
 		]
