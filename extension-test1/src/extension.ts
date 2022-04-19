@@ -1,8 +1,12 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import {
+	TextDocument,
+	Position
+} from 'vscode';
 
-function provideHover(document: any, position: any) {
+function provideHover(document: TextDocument, position: Position) {
 	return {
 		contents: ['Hover Content']
 	};
@@ -15,11 +19,6 @@ export function activate(context: vscode.ExtensionContext) {
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// 此行代码仅在激活扩展时执行一次
 	console.log('Congratulations, your extension "test-vscode" is now active!');
-
-
-	// 用console输出诊断信息(console.log)和错误(console.error)
-	// 下面的代码只会在你的插件激活时执行一次
-	console.log('Congratulations, your extension "my-first-extension" is now active!');
 
 	// 入口命令已经在package.json文件中定义好了，现在调用registerCommand方法
 	// registerCommand中的参数必须与package.json中的command保持一致

@@ -1,9 +1,9 @@
 {
-  "name": "test-vscode",
-	"publisher":"puppet-dev",
+	"name": "test-vscode",
+	"publisher": "puppet-dev",
 	"displayName": "test my extension",
 	"description": "用来测试我的插件",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
@@ -11,24 +11,29 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:testHello",
-				"onLanguage:javascript",
-        "onLanguage:vue"
+		"onCommand:testHello",
+		"onLanguage:javascript",
+		"onLanguage:vue",
+		"workspaceContains:**/index.html"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
-		"configuration":{
+		"configuration": {
 			"type": "object",
-			"title": "my extension configuration",
-			"properties":{
-				"myExtension.switchTest":{
-					"type":"boolean",
+			"title": "我的插件配置",
+			"properties": {
+				"myExtension.switchTest": {
+					"type": "boolean",
 					"default": false,
-					"description":"test config"
+					"description": "test config"
+				},
+				"myExtension.value1": {
+					"type": "number",
+					"default": 1,
+					"description": "test value1"
 				}
 			}
 		},
-
 		"commands": [
 			{
 				"command": "testHello",

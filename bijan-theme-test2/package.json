@@ -1,0 +1,21 @@
+{
+    "name": "bijan-theme-test2",
+    "displayName": "bijan-theme-test2",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Bijan",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Bijan-color-theme.json"
+            }
+        ]
+    }
+}

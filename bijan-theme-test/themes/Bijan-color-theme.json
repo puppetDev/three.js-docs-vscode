@@ -1,0 +1,12 @@
+{
+	"tokenColors": "./Bijan.tmTheme",
+	"colors": {
+		"editor.background": "#273136",
+		"editorCursor.foreground": "#ffb270",
+		"editor.foreground": "#f2fffc",
+		"editor.lineHighlightBackground": "#f2fffc0c",
+		"editor.selectionBackground": "#3a4449",
+		"editor.inactiveSelectionBackground": "#3a4449"
+	},
+	"name": "Bijan"
+}
